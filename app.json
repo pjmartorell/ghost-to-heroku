@@ -1,0 +1,30 @@
+{
+  "name": "Ghosted",
+  "description": "Just a blogging platform",
+  "repository": "https://github.com/pjmartorell/ghosted",
+  "logo": "https://raw.githubusercontent.com/pjmartorell/ghosted/master/logo.png",
+  "keywords": [
+    "ghost",
+    "blog",
+    "cms",
+    "deploy",
+    "heroku",
+    "button"
+  ],
+  "success_url": "/ghost",
+  "addons": [
+    "heroku-postgresql",
+    "mailgun"
+  ],
+  "env": {
+    "SITE_URL": {
+      "description": "Set your domain name or the URL of this Heroku app",
+      "value": "https://<app_name>.herokuapp.com"
+    },
+    "PGSSLMODE": {
+      "description": "Set to 'require' to enable SSL in your PostgreSQL database connection. Leave it blank to disable SSL.",
+      "required": false,
+      "value": "require"
+    }
+  }
+}
