@@ -25,6 +25,14 @@
       "description": "Set to 'require' to enable SSL in your PostgreSQL database connection. Leave it blank to disable SSL.",
       "required": false,
       "value": "require"
+    },
+    "KM_PRIVATE_KEY": {
+      "description": "Set Keymetrics private key",
+      "required": true
+    },
+    "KM_PUBLIC_KEY": {
+      "description":  "Set Keymetrics public key",
+      "required": true
     }
   }
 }
