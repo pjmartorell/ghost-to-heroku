@@ -1,6 +1,6 @@
 var pm2 = require('pm2');
 
-var MACHINE_NAME = 'hk1';
+var MACHINE_NAME = 'macbook';
 var PRIVATE_KEY  = process.env.KM_PRIVATE_KEY;   // Keymetrics Private key
 var PUBLIC_KEY   = process.env.KM_PUBLIC_KEY;   // Keymetrics Public  key
 
@@ -9,7 +9,7 @@ var maxMemory = process.env.WEB_MEMORY      || 512;// " " "
 
 pm2.connect(function() {
   pm2.start({
-    script    : 'server.js',
+    script    : 'ghost.js',
     name      : 'production-app',     // ----> THESE ATTRIBUTES ARE OPTIONAL:
     exec_mode : 'cluster',            // ----> https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#schema
     instances : instances,
